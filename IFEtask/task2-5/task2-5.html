@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task2-4</title>
+	<style>
+		#list{
+			font-size: 0;
+			display: flex;
+/*			采用flex布局，不用绝对定位再计算left值*/
+			align-items:flex-end;
+			height: 500px;
+			flex-wrap: nowrap;
+		}
+		#list li{
+			list-style: none;
+			width: 30px;
+			background: red;
+			font-size: 28px;
+			padding: 0 5px;
+			margin-right: 5px; 
+		}
+	</style>
+</head>
+<body>
+	<input type="text" id="inputtext" value="33">
+	<button id="leftinput">左侧入</button>
+	<button id="rihgtinput">左侧入</button>
+	<button id="leftmove">左侧出</button>
+	<button id="rightmove">右侧出</button>
+	<button id="sortbtn">从小到大排序</button>
+	<ul id="list">
+		<li>10</li>
+		<li>15</li>
+		<li>30</li>
+		<li>77</li>
+		<li>55</li>
+		<li>10</li>
+	</ul>
+	<script>
+	var leftinput= document.getElementById('leftinput');
+	var rihgtinput= document.getElementById('rihgtinput');
+	var leftmove= document.getElementById('leftmove');
+	var rightmove= document.getElementById('rightmove');
+	var list= document.getElementById('list');
+	var sortbtn= document.getElementById('sortbtn');
+	function surevalue(value){
+		//判断数字是否为10-100
+		if(/^([1-9][0-9]|100)$/.test(value)){
+			return ~~value;
+		}else{
+			alert("请输入10~100的整数");
+			return false;
+		}
+	}
+	function surelength(){
+		//判断个数是否超过60
+
+		if(list.getElementsByTagName('li').length>59){
+			alert("数组个数不能超过60个");
+			return false;
+		}else{return true;}
+	}
+	leftinput.onclick=function(){
+		var inputtext= surevalue(document.getElementById('inputtext').value);//在点击事件内再获取value值，如果全局获取会是最初的那个值 	
+		// var a=surelength();
+		if(inputtext&&surelength()){  //满足数据格式和数据个数再添加
+		var str = list.innerHTML;
+		str = '<li>'+inputtext+'</li>'+str;
+		list.innerHTML=str;
+		render(); //不加该事件 在添加和删除li后 点击li 自己删除会失效
+		}  
+	}
+	rihgtinput.onclick=function(){
+		var inputtext= surevalue(document.getElementById('inputtext').value);
+		surelength();
+		if(inputtext&&surelength()){
+		var str = list.innerHTML;
+		str = str+'<li>'+inputtext+'</li>';
+		list.innerHTML=str;
+		render();
+		}
+	}
+	leftmove.onclick=function(){
+		list.removeChild(list.children[0]);	
+		render();
+	}
+	rightmove.onclick=function(){
+		var i = list.children.length;
+		list.removeChild(list.children[i-1]);
+		render();	
+	}
+	function render(){
+		//渲染以及给li添加点击删除
+		var li = list.getElementsByTagName('li');
+		for(var i=0;i<li.length;i++){
+			
+			var height=~~li[i].innerHTML*5;
+			li[i].style.height=height+'px';
+			li[i].onclick=function(){
+				list.removeChild(this);		
+			}
+		}
+	}
+	render();
+	sortbtn.onclick=function sortbtn(){
+		//排序
+		var li = list.getElementsByTagName('li');
+		var list1=[];
+		var str = '';
+		for (i=0;i<li.length;i++){
+			list1[i]=li[i].innerText;
+		}
+		list1.sort();
+		console.log(list1);
+		for(i=0;i<list1.length;i++){
+			str+='<li>'+list1[i]+'</li>'
+		}
+		list.innerHTML=str;
+		render();
+	// 	li.each(function(a,b){
+	// 		return a.innerHTML-b.innerHTML
+	// 	})
+	}
+	</script>
+</body>
+</html>

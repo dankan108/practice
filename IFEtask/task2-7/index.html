@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task2-7</title>
+	<style>
+		div{
+			border: 1px solid black;
+			background: white;
+		}
+		.wrap{
+			width: 800px;
+			height: 400px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+		}
+		.wrap>div{
+			width: 80%;
+			height: 40%;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+		.wrap>div div{
+			width: 40%;
+			height: 70%;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div>
+			<div>
+				<div>
+					<div></div>
+					<div></div>
+				</div>
+				<div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+			<div>
+				<div>
+					<div></div>
+					<div></div>
+				</div>
+				<div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div>
+				<div>
+					<div></div>
+					<div></div>
+				</div>
+				<div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+			<div>
+				<div>
+					<div></div>
+					<div></div>
+				</div>
+				<div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<button id='btn'>遍历</button>
+	<script>
+		var wrap=document.querySelector(".wrap"),
+			btn=document.querySelector("#btn"),
+			list=[],
+			before='',
+			flag=false;//设置一个状态属性，动画未结束时 点击无效
+
+		//点击 遍历数组存放至list 渲染list 清空list
+		btn.onclick=function(){
+			if(!flag){
+				flag=true;
+				ergodic(wrap);
+				// console.log(list);
+				render(list);
+				list=[];//清空list  否则第二次点击会走两遍
+			}
+ 		}
+ 		//遍历函数 将元素存到list中
+ 		function ergodic(node){
+			if(node){
+				list.push(node);
+				ergodic(node.firstElementChild);
+				ergodic(node.lastElementChild);
+			}
+		}
+		//渲染遍历过程
+		function render(list){
+			for(i=0;i<list.length;i++){
+				setTimeout((function(i){
+					return function(){
+						if(i==list.length-1){
+							flag=false;
+						}
+						if(before){
+							before.style.background='white';
+						}
+						list[i].style.background='red';
+						before=list[i];
+					}
+				})(i),i*300)
+			}
+		}
+	</script>
+</body>
+</html>

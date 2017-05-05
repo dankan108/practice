@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task2-6</title>
+	<style>
+		#inputtext{
+			width: 300px;height: 100px;
+		}
+		#list{
+			font-size: 0;
+		}
+		#list li{
+			list-style: none;
+			display: inline-block;
+			width: 50px
+			height: 50px;
+			background: red;
+			font-size: 28px;
+			text-align: center;
+			padding: 0 5px;
+			margin-left: 10px; 
+		}
+
+	</style>
+</head>
+<body>
+	<textarea id="inputtext"></textarea> 
+	<button id="leftinput">左侧入</button>
+	<button id="rihgtinput">左侧入</button>
+	<button id="leftmove">左侧出</button>
+	<button id="rightmove">右侧出</button>
+	<input type="text" id="searchtext" onblur="reset()" ><button id="search" >搜索</button>
+	<ul id="list">
+		<li>10</li>
+		<li>3</li>
+		<li>6</li>
+		<li>77</li>
+		<li>55</li>
+	</ul>
+	<script>
+	var leftinput= document.getElementById('leftinput');
+	var rihgtinput= document.getElementById('rihgtinput');
+	var leftmove= document.getElementById('leftmove');
+	var rightmove= document.getElementById('rightmove');
+	var list= document.getElementById('list');
+	var li = list.getElementsByTagName('li');
+	var search= document.getElementById('search');
+
+
+	function splitstr(){
+		//分割textarea 里输入的字符
+		var textarea = document.getElementById('inputtext').value;
+		// console.log(textarea);
+		var textarea=textarea.replace(/[、,]|\s+|[\r]/g,",");//顿号句号空格回车 用，代替
+		var stradd='';
+		textarealist=textarea.split(",");
+		// console.log(textarealist);
+		for(i=0;i<textarealist.length;i++){
+			stradd+='<li>'+textarealist[i]+'</li>';
+		}
+		return stradd;
+	}
+
+	leftinput.onclick=function(){
+		var stradd=splitstr();
+		console.log(stradd);
+		var str = list.innerHTML;
+		str =stradd +str;
+		list.innerHTML=str;
+		click();   //不加该事件 在添加和删除li后 点击li 自己删除会失效
+	}
+	rihgtinput.onclick=function(){
+		var stradd=splitstr();
+		var str = list.innerHTML;
+		str = str+stradd;
+		list.innerHTML=str;
+		click();
+	}
+	leftmove.onclick=function(){
+		list.removeChild(list.children[0]);	
+		click();
+	}
+	rightmove.onclick=function(){
+		var i = list.children.length;
+		list.removeChild(list.children[i-1]);
+		click();	
+	}
+	function click(){
+		// var li = list.getElementsByTagName('li');
+		for(var i=0;i<li.length;i++){
+			li[i].onclick=function(){
+				list.removeChild(this);		
+				// console.log(this);
+			}
+		}
+	}
+	click();
+	
+
+	search.onclick = function(){
+		//点击搜索发生
+		var searchtext= document.getElementById('searchtext').value;
+		if(searchtext){//如果搜索不为空
+			for (i=0;i<li.length;i++){
+				if(li[i].innerText.indexOf(searchtext)>-1){//判断每个li中是否有相应的文字
+					li[i].style.background="blue";
+				}
+			}
+		}
+	}
+	function reset(){
+		//搜索输入框失去焦点时发生  
+		var searchtext= document.getElementById('searchtext').value;
+		if(!searchtext){//
+			for (i=0;i<li.length;i++){
+			li[i].style.background="red";}
+		}
+	}
+
+	</script>
+</body>
+</html>

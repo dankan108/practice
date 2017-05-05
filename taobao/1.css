@@ -1,0 +1,109 @@
+*{
+    font-family: Arial;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+img{
+    border: none;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+
+
+header{
+    background: #FE5400 url("img/1.png") no-repeat ;
+    background-size: 0.63rem 0.48rem;
+    background-position: 0.1rem center;
+    width: 100%;
+    /*height: 0.74rem;*/
+    padding-left: 0.83rem;
+    padding-right: 0.1rem;
+    padding-top: 0.13rem;
+    padding-bottom: 0.13rem;
+}
+header .search{
+    width: 100%;
+    height: 0.48rem;
+    font-size: 0.25rem;
+    line-height: 0.48rem;
+    border-radius: 0.08rem;
+    background-color:#B52600 ;
+    text-align: center;
+}
+header .search a{
+    color: white;
+    display: block;
+    letter-spacing: 0.05rem;
+}
+
+.wrap{
+    width: 100%;
+}
+.lunbo{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.lunbo .imgwrap{
+
+    /*height: 2.34rem;*/
+    /*width: 7.5rem;*/
+    width: 100%;
+    height:31.25vw;
+    overflow:hidden;
+}
+.imgwrap img{
+    width: 100%;
+    height:100%;
+    position: absolute;
+}
+.imgwrap img:nth-of-type(1){
+    left: 0;
+}
+.imgwrap img:nth-of-type(2){
+    left: 100%;
+}
+.imgwrap img:nth-of-type(3){
+    left: 200%;
+}
+.lunbo .imgbtn{
+    position: absolute;
+    height: 0.2rem;
+    right: 0.2rem;
+    bottom: 0.2rem;
+    font-size: 0px;
+}
+.imgbtn li{
+    display: inline-block;
+    line-height: 0.2rem;
+    margin-right: 0.2rem;
+    width: 0.2rem;
+    height: 0.2rem;
+    border-radius: 0.1rem;
+    background: #000;
+    /*float: left;*/
+
+}
+@media screen and (min-width: 992px ){
+    .wrap {
+        width: 992px;
+        margin: 0 auto;
+    }
+    .lunbo .imgwrap{
+
+        /*height: 2.34rem;*/
+        /*width: 7.5rem;*/
+        width: 100%;
+        height:310px;
+        overflow:hidden;
+    }
+
+}

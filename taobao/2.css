@@ -1,0 +1,256 @@
+* {
+  font-family: Arial;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+li {
+  list-style: none; }
+
+img {
+  border: none; }
+
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent; }
+
+a:hover {
+  text-decoration: none; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+html, body {
+        position: relative;
+
+    }
+body {
+  background-color: #EEEEEE; }
+
+header {
+  background: #FE5400 url("img/1.png") no-repeat;
+  background-size: 0.63rem 0.48rem;
+  background-position: 0.1rem center;
+  width: 100%;
+  /*height: 0.74rem;*/
+  padding-left: 0.83rem;
+  padding-right: 0.1rem;
+  padding-top: 0.13rem;
+  padding-bottom: 0.13rem; }
+
+header .search {
+  width: 100%;
+  height: 0.48rem;
+  font-size: 0.25rem;
+  line-height: 0.48rem;
+  border-radius: 0.08rem;
+  background-color: #B52600;
+  text-align: center; }
+
+header .search a {
+  color: white;
+  display: block;
+  letter-spacing: 0.05rem; }
+
+.lunbo {
+  width: 100%;
+  position: relative;
+  overflow: hidden; }
+
+.lunbo .imgwrap {
+  /*height: 2.34rem;*/
+  /*width: 7.5rem;*/
+  width: 100%;
+  height: 31.25vw;
+  overflow: hidden; }
+
+.imgwrap img {
+  width: 100%;
+  height: 100%;
+  position: absolute; }
+
+.imgwrap img:nth-of-type(1) {
+  left: 0; }
+
+.imgwrap img:nth-of-type(2) {
+  left: 100%; }
+
+.imgwrap img:nth-of-type(3) {
+  left: 200%; }
+
+.lunbo .imgbtn {
+  position: absolute;
+  height: 0.2rem;
+  right: 0.2rem;
+  bottom: 0.2rem;
+  font-size: 0px; }
+
+.imgbtn li {
+  display: inline-block;
+  line-height: 0.2rem;
+  margin-right: 0.2rem;
+  width: 0.2rem;
+  height: 0.2rem;
+  border-radius: 0.1rem;
+  background: #000;
+  /*float: left;*/ }
+
+   
+.header {
+  width: 100%;
+  background-color: white; }
+  .header .nav {
+    height: 3.45rem; }
+    .header .nav .nav1 {
+      height: 1.6em;
+      display: flex;
+      justify-content: space-around; }
+      .header .nav .nav1 .navitem {
+        width: 1.36em;
+        height: 1.6em; }
+        .header .nav .nav1 .navitem img {
+          display: block;
+          height: 0.86rem;
+          margin: 0.24rem  auto 0; }
+        .header .nav .nav1 .navitem p {
+          display: block;
+          height: 0.5em;
+          line-height: 0.5rem;
+          text-align: center;
+          font-size: 0.25rem; }
+  .header .news {
+    width: 100%;
+    border-top: 2px solid #E8E8E8;
+    height: 0.7rem; }
+    .header .news .newslogo {
+      display: block;
+      height: 0.7rem;
+      padding: 0.1rem;
+      border-right: 2px solid #E8E8E8;
+      float: left; }
+    .header .news p {
+      display: block;
+      margin: 0rem 0.1rem;
+      line-height: 0.7rem;
+      height: 0.7rem;
+      overflow: hidden;
+      font-size: 0.3rem; }
+      .header .news p span {
+        display: block;
+        height: 0.45rem;
+        margin: 0.1rem;
+        line-height: 1.28;
+        font-size: 0.35rem;
+        font-weight: 60;
+        color: red;
+        border: 1px solid red;
+        border-radius: 0.08rem;
+        float: left; }
+
+.firstitem {
+  width: 100%;
+  margin-top: 0.15rem;
+  height: 3.78rem;
+  background-color: white; }
+  .firstitem .fleft {
+    display: block;
+    background: transparent url("img/3.jpg") no-repeat;
+    background-size: cover;
+    width: 2.78rem;
+    height: 3.78rem;
+    border-right: 2px solid #E8E8E8; }
+  .firstitem .frightone {
+    display: block;
+    background: transparent url("img/f2.png") no-repeat 0.3rem 0;
+    background-size: cover;
+    width: 4.72rem;
+    height: 1.73rem;
+    border-bottom: 2px solid #E8E8E8; }
+  .firstitem .frighttwo {
+    display: block;
+    background: transparent url("img/q50.jpg") no-repeat;
+    background-size: 2.28rem 2.01rem;
+    width: 2.28rem;
+    height: 2.01rem;
+    border-right: 2px solid #E8E8E8; }
+  .firstitem .frightthree {
+    display: block;
+    background: transparent url("img/TB21MzojFXXXXXbXpXXXXXXXXXX_!!27-2-subaru.png") no-repeat;
+    background-size: 2.28rem 2.01rem;
+    width: 2.32rem;
+    height: 2.01rem; }
+
+.itemheader {
+  display: block;
+  width: 7.5rem;
+  height: 0.63rem;
+  padding-top: 0.16rem;
+  font-size: 0.3rem;
+  font-weight: 50;
+  text-align: center;
+  color: red;
+  border-bottom: 2px solid #E8E8E8; }
+
+.seconditem {
+  margin-top: 0.15rem;
+  background-color: white; }
+  .seconditem h4 {
+    background: white url("img/TB1t9n6LFXXXXaXXXXXXXXXXXXX-60-60.png") no-repeat;
+    background-size: 0.31rem 0.31rem;
+    background-position: 40% 50%; }
+  .seconditem .b1 {
+    width: 7.5rem;
+    height: 2.18rem;
+    border-bottom: 2px solid #E8E8E8; }
+    .seconditem .b1 .b1-1 {
+      display: block;
+      background: transparent url("img/TB1u_5AKVXXXXaGXFXXXXXXXXXX-432-330.jpg_q50.jpg") no-repeat;
+      background-size: contain;
+      width: 2.87rem;
+      height: 2.17rem;
+      border-right: 2px solid #E8E8E8; }
+    .seconditem .b1 .b1-2 {
+      display: block;
+      background: transparent url("img/subaru.png") no-repeat;
+      background-size: contain;
+      width: 1.53rem;
+      height: 2.17rem;
+      border-right: 2px solid #E8E8E8; }
+    .seconditem .b1 .b1-2:last-child {
+      border-right: none; }
+  .seconditem .b1:last-child {
+    border-bottom: none; }
+
+.threeitem {
+  margin-top: 0.15rem;
+  background-color: white; }
+  .threeitem h4 {
+    background: white url("img/TB1t9n6LFXXXXaXXXXXXXXXXXXX-60-60.png") no-repeat;
+    background-size: 0.31rem 0.31rem;
+    background-position: 38% 50%; }
+  .threeitem .b1 {
+    width: 7.5rem;
+    height: 2.18rem;
+    border-bottom: 2px solid #E8E8E8; }
+    .threeitem .b1 .b1-1 {
+      display: block;
+      background: transparent url("img/TB1u_5AKVXXXXaGXFXXXXXXXXXX-432-330.jpg_q50.jpg") no-repeat;
+      background-size: contain;
+      width: 2.87rem;
+      height: 2.17rem;
+      border-right: 2px solid #E8E8E8; }
+    .threeitem .b1 .b1-2 {
+      display: block;
+      background: transparent url("img/subaru.png") no-repeat;
+      background-size: contain;
+      width: 1.53rem;
+      height: 2.17rem;
+      border-right: 2px solid #E8E8E8; }
+    .threeitem .b1 .b1-2:last-child {
+      border-right: none; }
+  .threeitem .b1:last-child {
+    border-bottom: none; }
+
+/*# sourceMappingURL=2.css.map */

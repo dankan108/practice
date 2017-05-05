@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task2-4</title>
+	<style>
+		#list{
+			font-size: 0;
+		}
+		#list li{
+			list-style: none;
+			display: inline-block;
+			width: 50px
+			height: 50px;
+			background: red;
+			font-size: 28px;
+			text-align: center;
+			padding: 0 5px;
+			margin-left: 10px; 
+		}
+	</style>
+</head>
+<body>
+	<input type="text" id="inputtext" value="33">
+	<button id="leftinput">左侧入</button>
+	<button id="rihgtinput">左侧入</button>
+	<button id="leftmove">左侧出</button>
+	<button id="rightmove">右侧出</button>
+	<ul id="list">
+		<li>10</li>
+		<li>3</li>
+		<li>6</li>
+		<li>77</li>
+		<li>55</li>
+	</ul>
+	<script>
+	var leftinput= document.getElementById('leftinput');
+	var rihgtinput= document.getElementById('rihgtinput');
+	var leftmove= document.getElementById('leftmove');
+	var rightmove= document.getElementById('rightmove');
+	var list= document.getElementById('list');
+
+	leftinput.onclick=function(){
+		var inputtext= document.getElementById('inputtext').value;
+		var str = list.innerHTML;
+		str = '<li>'+inputtext+'</li>'+str;
+		list.innerHTML=str;
+		click();   //不加该事件 在添加和删除li后 点击li 自己删除会失效
+	}
+	rihgtinput.onclick=function(){
+		var inputtext= document.getElementById('inputtext').value;
+		var str = list.innerHTML;
+		str = str+'<li>'+inputtext+'</li>';
+		list.innerHTML=str;
+		click();
+	}
+	leftmove.onclick=function(){
+		list.removeChild(list.children[0]);	
+		click();
+	}
+	rightmove.onclick=function(){
+		var i = list.children.length;
+		list.removeChild(list.children[i-1]);
+		click();	
+	}
+	function click(){
+		var li = list.getElementsByTagName('li');
+		for(var i=0;i<li.length;i++){
+			li[i].onclick=function(){
+				list.removeChild(this);		
+				// console.log(this);
+			}
+		}
+	}
+	click();
+	
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简单页面</title>
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0" />
+    <script src="js/1.js"></script>
+    <script>
+        /*字号rem尺寸变化代码*/
+        window.onload=window.onresize=function(){
+            document.documentElement.style.fontSize=100*document.documentElement.clientWidth/640+'px';
+            document.body.style.height=view().h+"px";
+        };
+
+    </script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <section class="page show" id="welcome">
+        <div class="tree">
+            <img src="img/tree.jpg" alt="">
+            <div class="welcome2">
+                <img src="img/title.png" alt="">
+                <span class="shake"></span>
+            </div>
+            <img src="img/title2.png" alt="" class="tree3">
+            <span class="cloud"></span>
+            <span class="cloud"></span>
+            <span class="cloud"></span>
+        </div>
+        <h1 id="logo">
+            <img src="img/logo.png" alt="">
+        </h1>
+    </section>
+    <script>
+        fuload();
+    </script>
+    <section class="page show">
+        首页
+    </section>
+    <section class="page">
+        上传成功
+    </section>
+    <section class="page">
+        表单页
+    </section>
+    <section class="page">
+        新闻页
+    </section>
+</body>
+</html>

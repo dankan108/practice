@@ -1,0 +1,152 @@
+h1 {
+  margin: 0; }
+
+body {
+  margin: 0;
+  font-family: Arial;
+  color: #666;
+  position: relative; }
+
+.page {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  background-color: white;
+  font-size: 0.4rem;
+  z-index: 1;
+  display: none; }
+
+.show {
+  display: block; }
+
+.page:nth-of-type(1) {
+  z-index: 10; }
+
+.page:nth-of-type(2) {
+  z-index: 9; }
+
+.page:nth-of-type(3) {
+  z-index: 8; }
+
+.page:nth-of-type(4) {
+  z-index: 7; }
+
+.page:nth-of-type(5) {
+  z-index: 1; }
+
+#welcome {
+  transition: 1.5s; }
+
+img {
+  width: 100%; }
+
+@keyframes tree {
+  100% {
+    transform: translateY(0rem);
+    opacity: 1; } }
+@-webkit-keyframes tree {
+  100% {
+    -webkit-transform: translateY(0rem);
+    opacity: 1; } }
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: rotate(40deg); }
+  20% {
+    -webkit-transform: rotate(-30deg); }
+  40% {
+    -webkit-transform: rotate(25deg); }
+  60% {
+    -webkit-transform: rotate(-20deg); }
+  80% {
+    -webkit-transform: rotate(12deg); }
+  100% {
+    -webkit-transform: rotate(0deg); } }
+@-webkit-keyframes cloud {
+  0% {
+    -webkit-transform: translateX(0rem); }
+  100% {
+    -webkit-transform: translateX(-0.5rem); } }
+.tree {
+  display: block;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 10%;
+  transform: translateY(1rem);
+  -webkit-transform: translateY(1rem);
+  opacity: 0;
+  animation: 1s tree;
+  -webkit-animation: 1s tree;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards; }
+  .tree .welcome2 {
+    position: relative;
+    padding-top: 0.5rem;
+    transform: translateY(0.5rem);
+    -webkit-transform: translateY(0.5rem);
+    opacity: 0;
+    animation: 1s .3s tree;
+    -webkit-animation: 1s .3s tree;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards; }
+    .tree .welcome2 .shake {
+      position: absolute;
+      left: 80%;
+      top: 0.3rem;
+      width: 0.35rem;
+      height: 0.38rem;
+      background-image: url("../img/shake.png");
+      background-size: cover;
+      -webkit-transform-origin: left bottom;
+      animation: 0.5s 1s shake;
+      -webkit-animation: 0.5s 1s shake;
+      animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards; }
+  .tree .tree3 {
+    padding-top: 0.3rem; }
+  .tree .cloud {
+    position: absolute;
+    background: url("../img/cloud.png") no-repeat;
+    background-size: contain; }
+  .tree .cloud:nth-of-type(1) {
+    top: 12%;
+    left: 18%;
+    width: 0.9rem;
+    height: 0.6rem;
+    animation: cloud  2s 2s infinite alternate linear;
+    -webkit-animation: cloud  2s 2s infinite alternate linear; }
+  .tree .cloud:nth-of-type(2) {
+    top: 0;
+    left: 50%;
+    width: 0.7rem;
+    height: 0.5rem;
+    animation: cloud  2s 2.8s infinite alternate linear;
+    -webkit-animation: cloud  2s  2.8sinfinite alternate linear; }
+  .tree .cloud:nth-of-type(3) {
+    top: 20%;
+    left: 70%;
+    width: 0.6rem;
+    height: 0.4rem;
+    animation: cloud  2s 3.3s infinite alternate linear;
+    -webkit-animation: cloud  2s 3.3s infinite alternate linear; }
+
+@keyframes logo {
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes logo {
+  100% {
+    opacity: 1; } }
+#logo {
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  opacity: 0;
+  animation: 1s .6s logo;
+  -webkit-animation: 1s .6s logo;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards; }
+
+/*# sourceMappingURL=index.css.map */

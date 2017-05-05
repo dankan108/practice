@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>妙味云盘</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        /*公共样式*/
+        .fl{
+            float: left;
+        }
+        .fr{
+            float: right;
+        }
+        .ml30{
+            margin-left: 30px;
+        }
+        .mr10{
+            margin-right: 10px;
+        }
+        .mr30{
+            margin-right: 30px;
+        }
+        .mb32{
+            margin-bottom: 32px;
+        }
+        .por{
+            position: relative;
+        }
+        a{
+            text-decoration: none;
+            cursor: pointer;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+        /*内容样式*/
+        /*header*/
+        *{
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        body{
+            background: #6e7db2;
+            font-size: 16px;
+        }
+        .main{
+            width:1200px;
+            height: 720px;
+            background: white;
+            border-radius: 15px;
+            margin:60px auto 0px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header{
+            width: 100%;
+            height: 70px;
+        }
+        .header span{
+            height: 70px;
+            display: inline-block;
+        }
+        .header span h1{
+            display: inline;
+            line-height: 70px;
+            font-size: 21px;
+            position: absolute;
+            top:2px;
+            left: 70px;
+            color: rgb(56,156,209);
+        }
+
+        .header img{
+            margin-top: 14px;
+        }
+
+        /*btn*/
+        .btn-group{
+            height: 60px;
+            background: rgb(236,240,246);
+            border-top:1px solid rgb(208,217,222) ;
+            border-bottom: 1px solid rgb(208,217,222);
+            padding-left: 20px;
+            padding-right: 20px;
+            overflow: visible;
+        }
+        .btn-group .btn{
+            display: inline-block;
+            height: 40px;
+            margin-top: 10px;
+            line-height: 40px;
+            padding: 0 20px 0 20px;
+            text-align: center;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid rgb(85,173,220);
+            color:rgb(85,173,220) ;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .btn-group .btn-1{
+            display:inline-block; ;
+            height: 40px;
+            margin-top: 10px;
+            line-height: 40px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .btn-group .btn-1 img{
+            width: 42px;
+            height: 42px;
+        }
+        .btn-group .fl a span{
+            background:#ffffff url("image/btn-before.gif") no-repeat left;
+            padding-left: 30px;
+        }
+        .btn-group .fr span{
+            background:#ffffff url("image/btn-3.jpg") no-repeat left;
+            padding-left: 25px;
+        }
+        .btn-group .btn-2{
+            z-index: 99;
+        }
+        .btn-group .btn-2:hover{
+            height: 70px;
+            border-bottom: none;
+            z-index: 99;
+        }
+        .btn-group .btn-2:hover #paixu{
+            display: block;
+        }
+        #paixu{
+            display: none;
+            border: 1px solid rgb(85,173,220);
+            position: absolute;
+            /*border-radius: 8px;*/
+            top:48px;
+            right:-1px;
+            z-index: -99;
+        }
+        #paixu li{
+            display: block;
+
+        }
+        #paixu li a{
+            display: block;
+            height: 38px;
+            width: 132px;
+            line-height: 38px;
+            font-size: 16px;
+            background:#ffffff url("image/btn-3.jpg") no-repeat 10px ;
+            padding-left: 25px;
+            text-align: center;
+        }
+        #paixu li a:hover{
+            background-color: rgb(225,232,237)
+        }
+
+        /*aside*/
+        .aside{
+            width: 260px;
+            height: 590px;
+            border-right: 2px solid rgb(225,232,237);
+            /*background-color: red;*/
+        }
+        .aside .it{
+            width: 100%;
+            height: 32px;
+            line-height: 32px;
+            font-size: 16px;
+            color: rgb(102,117,127);
+            background-color: white;
+        }
+        .aside .item{
+            width: 100%;
+            height: 48px;
+            padding-top: 10px;
+            line-height: 38px;
+            padding-left: 20px;
+
+        }
+        .aside .item-item{
+            padding-left: 50px;
+            background-color: rgb(225,232,237);
+        }
+        .aside .item-item-item{
+            padding-left: 80px;
+        }
+        .aside .item-item-item-item{
+            padding-left: 110px;
+        }
+        .aside .bg1{
+            background: rgba(255,255,255,0) url("image/item-bg.jpg") no-repeat left 0px;
+            padding-left: 46px;
+            font-size: 16px;
+        }
+        .aside .bg2{
+            background: white url("image/item-bg2.jpg") no-repeat left 0px;
+            padding-left: 46px;
+            font-size: 16px;
+        }
+        /*content*/
+        .content{
+            width:940px;
+            height: 590px;
+            background-color: rgb(245,248,250);
+            font-size: 18px;
+        }
+        .content .content-header a{
+            color: #000000;
+            display: inline-block;
+            vertical-align:middle;
+        }
+        .content .content-header a:hover{
+            color: #000000;
+        }
+        .content .content-header{
+            width: 100%;
+            height: 50px;
+            line-height: 44px;
+            background-color: white;
+            border-bottom: 2px solid rgb(225,232,237);
+        }
+        .content .content-main{
+            background-color: rgb(245,248,250);
+            }
+        .content .line{
+            height: 50px;
+            line-height: 44px;
+            border-bottom: 1px solid rgb(225,232,237);
+        }
+        .content .line1{
+            background-color: rgb(245,248,250);
+        }
+        .content .line2{
+            background-color: white;
+        }
+        .content .square{
+            background-color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            border: 1px solid rgb(225,232,237);
+            display: inline-block;
+            vertical-align:middle;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+        .content .jiantou{
+            background: white url("image/line.jpg");
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            vertical-align:middle;
+        }
+        .content .bag{
+            background: transparent url("image/line-1.jpg") no-repeat;
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            vertical-align:middle;
+        }
+        .content .xiazai{
+            background: transparent url("image/line-3.jpg") no-repeat;
+            width: 164px;
+            height: 24px;
+            display: inline-block;
+            vertical-align:middle;
+            margin-left: 180px;
+        }
+        .content .xiazai1{
+            background: transparent url("image/line-3.jpg") no-repeat;
+        }
+        .content .xiazai2{
+            background: transparent url("image/line-2.jpg") no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="header clearfix">
+            <span class="fl ml30"><div><img src="image/logo.gif" alt=""></div><h1 class="ml30">妙味云盘</h1></span>
+            <span class="fr mr30"><img src="image/person.gif" alt="" class="person-logo"></span>
+        </div>
+        <div class="btn-group clearfix">
+            <div class="fl">
+                <a class="mr10 btn"><span>下载</span></a>
+                <a class="mr10 btn"><span>下载</span></a>
+                <a class="mr10 btn"><span>下大是大非</span></a>
+                <a class="mr10 btn"><span>下载</span></a>
+                <a class="mr10 btn"><span>线件违反</span></a>
+            </div>
+            <div class="fr ">
+                <a class="mr10 btn-1"><img src="image/btn-2.gif" alt=""></a>
+                <div class="btn fr por btn-2" >
+                    <span>︶</span>
+                    <div id="paixu">
+                        <ul >
+                            <li><a>按时间排序</a></li>
+                            <li><a>按时间排序</a></li>
+                            <li><a>按时间排序</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="aside fl">
+            <div class="item">
+                <span class="bg1">微云</span>
+            </div>
+            <div class="it item-item">
+                <span class="bg1">JS课程</span>
+            </div>
+            <div class="it item-item-item">
+                <span class="bg2">123</span>
+            </div>
+            <div class="it item-item-item mb32">
+                <span class="bg1">333</span>
+            </div>
+            <div class="it item-item-item">
+                <span class="bg1">CSS课程</span>
+            </div>
+            <div class="it item-item-item-item">
+                <span class="bg2">CSS课程</span>
+            </div>
+            <div class="it item-item-item-item">
+                <span class="bg2">123</span>
+            </div>
+            <div class="it item-item-item-item mb30">
+                <span class="bg2">JS基础课程</span>
+            </div>
+            <div class="it item-item-item">
+                <span class="bg2">11113</span>
+            </div>
+            <div class="it item-item-item">
+                <span class="bg2">12432</span>
+            </div>
+        </div>
+        <div class="content fr">
+            <div class="content-header">
+                <span class="square"></span>
+                <a href="">微云</a>
+                <span class="jiantou"></span>
+                <a href="">微云</a>
+                <span class="jiantou"></span>
+                <a href="">微云</a>
+                <span class="jiantou"></span>
+            </div>
+            <div class="content-main">
+                <div class="line line1">
+                    <span class="square"></span>
+                    <span class="bag"></span>
+                    <span>js基础课程</span>
+                    <span class="xiazai xiazai1"></span>
+                    <span class="fr mr30">2017年2月11日</span>
+                </div>
+                <div class="line line2">
+                    <span class="square"></span>
+                    <span class="bag"></span>
+                    <span>js基础课程</span>
+                    <span class="xiazai xiazai2"></span>
+                    <span class="fr mr30">2017年2月11日</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
