@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>腾讯网</title>
+<script type="text/javascript" src='js/jquery.min.js'></script> 
+<script type="text/javascript" src="js/index.js"></script>
+<script src="js/TouchSlide.1.0.js"></script>
+
+<!--必要样式-->
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<style type="text/css">
+
+	.focus{max-width: 600px;  margin:0 auto; position:relative; overflow:hidden;   }
+	.focus .hd{ width:100%; height:11px;  position:absolute; z-index:1; bottom:5px; text-align:center;  }
+	.focus .hd ul{ display:inline-block; height:5px; padding:3px 5px; background-color:rgba(255,255,255,0.7); 
+		-webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; font-size:0; vertical-align:top;
+	}
+	.focus .hd ul li{ display:inline-block; width:5px; height:5px; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; background:#8C8C8C; margin:0 5px;  vertical-align:top; overflow:hidden;   }
+	.focus .hd ul .on{ background:#FE6C9C;  }
+
+	.focus .bd{ position:relative; z-index:0; }
+	.focus .bd li img{ width:100%;  height:140px; background:url(images/loading.gif) center center no-repeat;  }
+	.focus .bd li a{ -webkit-tap-highlight-color:rgba(0, 0, 0, 0); /* 取消链接高亮 */  }
+</style>
+
+</head>
+<body>
+
+<div class="header">
+	<div class="headerbox">
+		<h1 class="logo"><a href=""><img src="images/logo.png" /></a></h1>
+		<div class="wmlm"><a href=""><img src="images/a_01.png" /></a></div>
+		<p><a href="">触屏版</a><a href="">智能版</a></p>
+	</div>
+</div>
+<div class="nav">
+	<ul>
+		<li><a href="">新闻</a></li>
+		<li><a href="">财经</a></li>
+		<li><a href="">娱乐</a></li>
+		<li><a href="">体育</a></li>
+		<li><a href="">股票</a></li>
+		<li><a href="">军事</a></li>
+		<li><a href="">汽车</a></li>
+		<li><a href="">视频</a></li>
+		<li><a href="">科技</a></li>
+		<li><a href="">女性</a></li>
+		<li><a href="">NBA</a></li>
+		<li><a href="">社会</a></li>
+		<li><a href="">图片</a></li>
+		<li><a href="">笑话</a></li>
+		<li><a href="">招聘</a></li>
+		<li><a href="">旅游</a></li>
+		<li><a href="">空间</a></li>
+		<li><a href="">力购</a></li>
+		<li><a href="">游戏</a></li>
+		<li><a href="">会员</a></li>
+		<li><a href="">书城</a></li>
+	</ul>
+</div>
+<div class="sslm"><input name="" type="button" class="bnt10"/>
+  <input type="text" class="wby1" placeholder="杀鸡见鸡宝" />
+</div>
+<div id="focus" class="focus">
+				<div class="hd">
+					<ul></ul>
+				</div>
+				<div class="bd">
+					<ul>
+							<li><a href="#"><img src="images/1 (1).jpg" /></a></li>
+							<li><a href="#"><img src="images/1 (2).jpg" /></a></li>
+							<li><a href="#"><img src="images/1 (3).jpg" /></a></li>
+							<li><a href="#"><img src="images/1 (4).jpg" /></a></li>
+					</ul>
+				</div>
+</div>
+			<script type="text/javascript">
+				TouchSlide({ 
+					slideCell:"#focus",
+					titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+					mainCell:".bd ul", 
+					effect:"left", 
+					autoPlay:true,//自动播放
+					autoPage:true, //自动分页
+					switchLoad:"_src" //切换加载，真实图片路径为"_src" 
+				});
+			</script>
+<div class="accordion-container">
+
+	<div class="container">
+		<!--tpjs_box-->
+		<div class="tpjs_box">
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>头条</span></p>
+			</div>
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>头条</span></p>
+			</div>
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>头条</span></p>
+			</div>
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>头条</span></p>
+			</div>
+		</div>
+		<!--tpjs_box-->
+		<div class="accordion-desc">
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>头条</span></p>
+			</div>
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>头条</span></p>
+			</div>
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>头条</span></p>
+			</div>
+		</div>
+		<div class="accordion"><a href="javascript:void(0)"><img src="images/a_03.png" /></a></div>
+		
+		<!--news_a-->
+		<div class="news_a">
+			<div class="news_title"><h2><span><a href="">八卦</a><a href="">段子</a></span>微信热文</h2></div>
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>热门</span></p>
+			</div>
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>热门</span></p>
+			</div>
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>热门</span></p>
+			</div>
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>热门</span></p>
+			</div>
+		</div>
+		<!--news_a-->
+		<div class="accordion-desc">
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>头条</span></p>
+			</div>
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>头条</span></p>
+			</div>
+		</div>
+		<div class="accordion"><a href="javascript:void(0)"><img src="images/a_03.png" /></a></div>
+		
+		<!--news_a-->
+		<div class="news_a">
+			<div class="news_title"><h2><span><a href="">直播</a><a href="">视频</a><a href="">装备</a></span><img src="images/a_05.png" />NBA</h2></div>
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>热门</span></p>
+			</div>
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>热门</span></p>
+			</div>
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>热门</span></p>
+			</div>
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>热门</span></p>
+			</div>
+		</div>
+		<!--news_a-->
+		<div class="accordion-desc">
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>头条</span></p>
+			</div>
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>头条</span></p>
+			</div>
+		</div>
+		<div class="accordion"><a href="javascript:void(0)"><img src="images/a_03.png" /></a></div>
+		
+		
+		<!--news_a-->
+		<div class="news_a">
+			<div class="news_title"><h2><span><a href="">直播</a><a href="">亚冠</a><a href="">欧冠</a></span>花边</h2></div>
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>热门</span></p>
+			</div>
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>热门</span></p>
+			</div>
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>热门</span></p>
+			</div>
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>热门</span></p>
+			</div>
+		</div>
+		<!--news_a-->
+		<div class="accordion-desc">
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>头条</span></p>
+			</div>
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>头条</span></p>
+			</div>
+		</div>
+		<div class="accordion"><a href="javascript:void(0)"><img src="images/a_03.png" /></a></div>
+		
+		
+		<!--news_a-->
+		<div class="news_a">
+			<div class="news_title"><h2><span><a href="">亚冠</a><a href="">欧冠</a><a href="">花边</a></span>体育</h2></div>
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>热门</span></p>
+			</div>
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>热门</span></p>
+			</div>
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>热门</span></p>
+			</div>
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>热门</span></p>
+			</div>
+		</div>
+		<!--news_a-->
+		<div class="accordion-desc">
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>头条</span></p>
+			</div>
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>头条</span></p>
+			</div>
+		</div>
+		<div class="accordion"><a href="javascript:void(0)"><img src="images/a_03.png" /></a></div>
+		
+		
+		<!--news_a-->
+		<div class="news_a">
+			<div class="news_title"><h2><span><a href=""><img src="images/a_05.png" />现来一批</a></span>时事热词</h2></div>
+			<ul class="xwlb">
+				<li><a href="">农民吃上了老虎肉</a></li>
+				<li><a href="">农民吃上了老虎肉</a></li>
+				<li><a href="">农民吃上了老虎肉</a></li>
+				<li><a href="">农民吃上了老虎肉</a></li>
+				<li><a href="">农民吃上了老虎肉</a></li>
+				<li><a href="">农民吃上了老虎肉</a><span class="rchb">热</span></li>
+			</ul>
+		</div>
+		<!--news_a-->
+		
+		<!--news_a-->
+		<div class="news_a">
+			<div class="news_title"><h2><span><a href="">亚冠</a><a href="">欧冠</a><a href="">花边</a></span>笑话</h2></div>
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>热门</span></p>
+			</div>
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>热门</span></p>
+			</div>
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>热门</span></p>
+			</div>
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>热门</span></p>
+			</div>
+		</div>
+		<!--news_a-->
+		<div class="accordion-desc">
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>头条</span></p>
+			</div>
+			<div class="news">
+			<a href=""><img src="images/a_02.png" /></a>
+				<p>习近平参团审议询问青海拉面跟兰州拉面啥区别</p>
+				<p><span>头条</span></p>
+			</div>
+		</div>
+		<div class="accordion"><a href="javascript:void(0)"><img src="images/a_03.png" /></a></div>
+		
+		
+		<!--news_a-->
+		<div class="news_a">
+			<div class="news_title"><h2>应用中心</h2></div>
+			<ul class="yyzx">
+				<li><a href=""><img src="images/a_06.png" /></a><p>手机腾讯网</p></li>
+				<li><a href=""><img src="images/a_06.png" /></a><p>手机腾讯网</p></li>
+				<li><a href=""><img src="images/a_06.png" /></a><p>手机腾讯网</p></li>
+				<li><a href=""><img src="images/a_06.png" /></a><p>手机腾讯网</p></li>
+				<li><a href=""><img src="images/a_06.png" /></a><p>手机腾讯网</p></li>
+				<li><a href=""><img src="images/a_06.png" /></a><p>手机腾讯网</p></li>
+				<li><a href=""><img src="images/a_06.png" /></a><p>手机腾讯网</p></li>
+				<li><a href=""><img src="images/a_06.png" /></a><p>手机腾讯网</p></li>
+			</ul>
+		</div>
+		<!--news_a-->
+		
+		<!--news_a-->
+		<div class="news_a">
+			<div class="news_title"><h2>应用中心</h2></div>
+			<ul class="shfw">
+				<li><a href=""><img src="images/a_07.png" /></a><p>找工作</p></li>
+				<li><a href=""><img src="images/a_07.png" /></a><p>找工作</p></li>
+				<li><a href=""><img src="images/a_07.png" /></a><p>找工作</p></li>
+				<li><a href=""><img src="images/a_07.png" /></a><p>找工作</p></li>
+				<li><a href=""><img src="images/a_07.png" /></a><p>找工作</p></li>
+				<li><a href=""><img src="images/a_07.png" /></a><p>找工作</p></li>
+				<li><a href=""><img src="images/a_07.png" /></a><p>找工作</p></li>
+				<li><a href=""><img src="images/a_07.png" /></a><p>找工作</p></li>
+				<li><a href=""><img src="images/a_07.png" /></a><p>找工作</p></li>
+				<li><a href=""><img src="images/a_07.png" /></a><p>找工作</p></li>
+			</ul>
+		</div>
+		<!--news_a-->
+		
+	</div>
+	<div class="footer">
+		<ul>
+		<li><a href="">新闻</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+		<li><a href="">娱乐</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+		<li><a href="">体育</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+		<li><a href="">财经</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+		<li><a href="">科技</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+		<li><a href="">视频</a></li>
+		</ul>
+		<p><a href="">分享</a><a href="">反馈</a><a href="">退出</a></p>
+		<h2>版权信息</h2>
+	</div>
+
+</div>
+
+
+
+</body>
+</html>
