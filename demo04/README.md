@@ -1,0 +1,1 @@
+利用swiper和ainmate.css实现的简单全屏滚动加载效果，并用bootstrap做了简单的响应式设计

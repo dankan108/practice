@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>swiper</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
+    <link rel="stylesheet" href="bower_components/swiper/dist/css/swiper.min.css">
+    <script src="swiper.animate1.0.2.min.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<nav class="navbar navbar-default" style="margin:0">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">动态页面</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+     <!--  <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li>
+    
+      </ul> -->
+      
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+        </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <p class="ani" swiper-animate-effect="fadeInUpBig" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">Lorem ipsum dolor sit amet, consectetur</p>
+        </div>
+        <div class="swiper-slide">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 ani "  swiper-animate-effect="fadeInUpBig" swiper-animate-delay="0.3s">
+                        <img clas="img-responsive" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/nature.jpeg" alt="">
+                    </div>
+                    <div class="col-sm-4 ani"  swiper-animate-effect="fadeInUpBig" swiper-animate-delay="0.6s">
+                        <img clas="img-responsive" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/people.png" alt="">
+                    </div>
+                    <div class="col-sm-4 ani hidden-xs"  swiper-animate-effect="fadeInUpBig" swiper-animate-delay="0.9s">
+                        <img clas="img-responsive" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/tech.jpeg" alt="">
+                    </div>
+                    <div class="col-xs-12 text-center  ani"  swiper-animate-effect="rollIn" swiper-animate-delay="1.2s">
+                        <button type="button" class="btn btn-lg">A simple button</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3 col-sm-offset-3 ani " swiper-animate-effect="fadeInRightBig" swiper-animate-delay="0.3s">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/any.jpeg" alt="" class="img-responsive">
+                    </div>
+                    <div class="col-sm-3  ani hidden-xs" swiper-animate-effect="fadeInLeftBig" swiper-animate-delay="0.6s">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/tech_(1).jpeg" alt="" class="img-responsive">
+                    </div>
+                    <div class="col-xs-12 text-center ani" swiper-animate-effect="bounceInDown" swiper-animate-delay="1.2s">
+                        <button type="button" class="btn btn-lg">A simple button</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="swiper-slide">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 ani" swiper-animate-effect="zoomIn" swiper-animate-delay="0.3s">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus corporis dolores ea eligendi esse fuga fugiat inventore ipsam magnam maxime non, possimus praesentium quam quidem, ratione reiciendis vero voluptas! Expedita?</p>
+                    </div>
+                    <div class="col-xs-12 ani" swiper-animate-effect="zoomIn" swiper-animate-delay="0.6s" contenteditable="true">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus corporis dolores ea eligendi esse fuga fugiat inventore ipsam magnam maxime non, possimus praesentium quam quidem, ratione reiciendis vero voluptas! Expedita?</p>
+                    </div>
+                    <div class="col-xs-12 ani" swiper-animate-effect="lightSpeedIn" swiper-animate-delay="0.9s" id="remove">
+                        <button type="button" class="btn btn-lg">A simple button</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/swiper/dist/js/swiper.jquery.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        direction: 'vertical',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 0,
+        mousewheelControl: true,
+        //动画
+        onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+            swiperAnimateCache(swiper); //隐藏动画元素
+            swiperAnimate(swiper); //初始化完成开始动画
+        },
+        onSlideChangeEnd: function(swiper){
+            swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+        }
+    });
+    $('#remove').one('animationend',function () {
+        $(this).removeClass('lightSpeedIn').addClass('zoomOutDown');
+    })
+</script>
+</body>
+</html>
